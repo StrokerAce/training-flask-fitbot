@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "6cf91bab-0b34-47cb-9f54-03bde930f86e",
+		"name": "flask_mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44398634",
+		"_collection_link": "https://matthewtyler.postman.co/workspace/Matthew-Tyler's-Workspace~f60e79df-a8f3-49c3-87fa-b5672f27e614/collection/44398634-6cf91bab-0b34-47cb-9f54-03bde930f86e?action=share&source=collection_link&creator=44398634"
+	},
+	"item": [
+		{
+			"name": "jerk chicken valid",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Jerk chicken\",\n    \"ingredients\": [\n        \"1kg Chicken thighs\",\n        \"100ml jerk marinade\"\n    ],\n    \"method\": [\n        \"Marinate chicken in jerk marinade for at least 2 hours.\",\n        \"Heat oven to 220 degrees celsius.\",\n        \"Spread marinated chicken thighs onto large baking tray.\",\n        \"Cook for 25 minutes or until chicken is browned and juices run clear.\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/addRecipe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"addRecipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jerk chicken invalid",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Bad jerk chicken\",\n    \"ingredients\": [\n        \"1kg Chicken thighs\",\n        \"100ml jerk marinade\"\n    ],\n    \"instructions\": [\n        \"Marinate chicken in jerk marinade for at least 2 hours.\",\n        \"Heat oven to 220 degrees celsius.\",\n        \"Spread marinated chicken thighs onto large baking tray.\",\n        \"Cook for 25 minutes or until chicken is browned and juices run clear.\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/addRecipe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"addRecipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fried egg valid",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Fried egg\",\n    \"ingredients\": [\n        \"eggs\",\n        \"cooking oil\"\n    ],\n    \"method\": [\n        \"Add 1 tsp of cooking oil to a non stick frying pan and heat on hob.\",\n        \"Crack egg into pan.\",\n        \"Cook until white is solid and yolk is to taste.\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/addRecipe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"addRecipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllRecipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/getAllRecipes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"getAllRecipes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
