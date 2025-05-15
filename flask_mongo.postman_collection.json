@@ -130,6 +130,72 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "getRecipe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Bad jerk chicken\",\n    \"ingredients\": [\n        \"1kg Chicken thighs\",\n        \"100ml jerk marinade\"\n    ],\n    \"instructions\": [\n        \"Marinate chicken in jerk marinade for at least 2 hours.\",\n        \"Heat oven to 220 degrees celsius.\",\n        \"Spread marinated chicken thighs onto large baking tray.\",\n        \"Cook for 25 minutes or until chicken is browned and juices run clear.\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/getRecipe/6824b7f59522f3d34881660c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"getRecipe",
+						"6824b7f59522f3d34881660c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRecipe invalid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Bad jerk chicken\",\n    \"ingredients\": [\n        \"1kg Chicken thighs\",\n        \"100ml jerk marinade\"\n    ],\n    \"instructions\": [\n        \"Marinate chicken in jerk marinade for at least 2 hours.\",\n        \"Heat oven to 220 degrees celsius.\",\n        \"Spread marinated chicken thighs onto large baking tray.\",\n        \"Cook for 25 minutes or until chicken is browned and juices run clear.\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/getRecipe/xxxxx",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"getRecipe",
+						"xxxxx"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
